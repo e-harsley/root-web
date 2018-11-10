@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Biscay Courier | About{% endblock %}
+
+{% block content %}
+    <section class="inner-w3ls">
+	<div class="container">
+		<h2 class="text-center w3layouts w3 w3l agileinfo">{{ request.user.username }}'s Page</h2>
+		<p class="text-center w3layouts w3 w3l agileinfo">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+	</div>
+</section>
+<!-- /banner section -->
+<!-- privacy -->
+<div class="privacy">
+	<div class="container">
+		<div class="privacy1">
+			<h3 class="wthree w3-agileits agileits-w3layouts agile w3-agile">User Activity</h3>
+			<div class="banner-bottom-grid1 privacy1-grid">
+				<ul>
+					<li><i class="glyphicon glyphicon-paste" aria-hidden="true"> News Feed</i></li>
+					<div class="list-group list-group-alternate">
+                        {% for g in goods %}
+                        <a href="{% url 'detail' g.id %}" class="list-group-item"> <span class="badge badge-info">{{ g.status }}</span><i class="ti ti-email"></i> {{ g.name_of_goods }} </a>
+                        {% endfor %}
+                    </div>
+				</ul>
+			</div>
+		</div>
+        <a href="#" class="btn btn-info" role="button">Link Button</a>
+
+		</div>
+	</div>
+{% endblock %}

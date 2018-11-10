@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Biscay Courier | Detail{% endblock %}
+
+{% block content %}
+<section class="inner-w3ls">
+	<div class="container">
+		<h2 class="text-center w3layouts w3 w3l agileits agileinfo">Track Your Product</h2>
+		<p class="text-center w3layouts w3 w3l agileits agileinfo">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+	</div>
+</section>
+<section class="transit-w3ls" style="color:black;">
+	<div class="container">
+		<i class="fa fa-trophy" aria-hidden="true"></i>
+		<h3 class="text-center">Transit Location</h3>
+		<p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	</div>
+	<div class="container" style="color:black;">
+						<div class="table-responsive" style="color:black;">
+							<table class="table" style="color:black;">
+								<thead>
+									<tr style="color:black;">
+										<th><p style="color:black;">Location</p></th>
+										<th><p style="color:black;">Tracking Number</p></th>
+										<th><p style="color:black;">Name </p></th>
+										<th><p style="color:black;">Dispatched</p></th>
+										<th><p style="color:black;">In-Transit</p></th>
+										<th><p style="color:black;">Goods Status</p></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr style="color:black;">
+										<td>
+											<p style="color:black;">{{ courier.location }}</p>
+											<div class="clearfix"></div>
+										</td >
+										<td><p style="color:black;">{{ courier.tracking_number }}</p></td>
+										<td><p style="color:black;">{{ courier.name_of_goods }}</p></td>
+										<td><p style="color:black;">{{ courier.dispath_time }}</p></td>
+										<td><p style="color:black;">{{ courier.delivery_date }}</p></td>
+										<td><p style="color:black;">{{ courier.status }}</p></td>
+                                        <td><a href="#" class="btn btn-info" role="button">Link Button</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+  <!-- Flatline -->
+</section>
+{% endblock %}
